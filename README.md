@@ -78,6 +78,7 @@ Our analysis pipeline combines computational content analysis, linguistic signal
 ### 📁 src/
 Python and R scripts used as a pipeline for processing, analyzing, and extracting features from the data.
 
+```
 src/ 
 ├── 01_cleaning.py # Flatten and clean raw ShareGPT JSONs 
 ├── 02_preprocessing_politeness_extraction.R # Extract politeness markers using the politeness R package 
@@ -85,6 +86,7 @@ src/
 ├── 04_alignment_quantification.py # Compute alignment metrics (word overlap, LSM, sentiment, politeness) 
 ├── 05_eda_stats.py # Run statistical tests and exploratory data analysis 
 └── ...
+```
 
 ### 📁 notebooks/
 Working Jupyter notebooks containing full analysis logic, exploratory experimentation, and intermediate results.
@@ -92,13 +94,17 @@ Working Jupyter notebooks containing full analysis logic, exploratory experiment
 ### 📁 results/
 Contains generated results from statistical and visual analysis.
 
+```
 results/ 
 ├── figures/ # Visualizations (e.g., distributions, trends, word clouds) 
 └── tests/ # Raw statistical test outputs (before z-scoring or Bonferroni correction)
+```
 
 ### 📁 output/
+```
 output/ 
 └── sample_metrics.csv # Cleaned text with extracted features for the first 100 rows (example output)
+```
 
 ### 📄 requirements.txt
 Python package dependencies for reproducing the analysis pipeline.
