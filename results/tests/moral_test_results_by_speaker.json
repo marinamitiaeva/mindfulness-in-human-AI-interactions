@@ -1,0 +1,37 @@
+[
+  {
+    "Feature":"authority_prob",
+    "Human Normality p-value":1.791260265e-180,
+    "GPT Normality p-value":3.86457865e-152,
+    "Mann-Whitney U Statistic":20855768120.0,
+    "Mann-Whitney p-value":0.0
+  },
+  {
+    "Feature":"care_prob",
+    "Human Normality p-value":2.073749769e-195,
+    "GPT Normality p-value":2.884740397e-162,
+    "Mann-Whitney U Statistic":19182838696.5,
+    "Mann-Whitney p-value":0.0
+  },
+  {
+    "Feature":"fairness_prob",
+    "Human Normality p-value":3.160467676e-181,
+    "GPT Normality p-value":6.362998234e-168,
+    "Mann-Whitney U Statistic":27575305782.5,
+    "Mann-Whitney p-value":0.0
+  },
+  {
+    "Feature":"loyalty_prob",
+    "Human Normality p-value":4.699172952e-199,
+    "GPT Normality p-value":3.394282036e-182,
+    "Mann-Whitney U Statistic":23496512977.0,
+    "Mann-Whitney p-value":0.0
+  },
+  {
+    "Feature":"sanctity_prob",
+    "Human Normality p-value":1.474962948e-204,
+    "GPT Normality p-value":1.875553337e-195,
+    "Mann-Whitney U Statistic":33584544819.0,
+    "Mann-Whitney p-value":0.0
+  }
+]

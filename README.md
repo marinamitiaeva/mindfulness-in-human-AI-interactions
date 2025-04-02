@@ -1,114 +1,104 @@
-# Moral Foundations and Alignment Analysis
+# Mindful Interactions with GenAI: A ChatGPT Case Study
 
-This repository contains a modular pipeline for analyzing language data through the lens of moral foundation theory and linguistic alignment. It includes three stages: moral score extraction, alignment computation, and statistical/visual analysis.
-
----
-
-## 📁 Project Structure
-
-```
-data/
-├── raw/                         # (Locally stored) Raw JSON files – not in repo
-│
-│   📦 Raw data files (~1.7GB total) are hosted externally:
-│   👉 Download from Hugging Face: https://huggingface.co/datasets/RyokoAI/ShareGPT52K
-├── processed/                  # Output from each pipeline stage
-│   ├── morality_scores.json
-│   ├── alignment_features.json
-│   └── ...
-scripts/
-├── moralformer_processor.py      # Extracts moral foundation scores
-├── alignment_processor.py        # Computes alignment metrics
-├── moral_stats_and_eda.py        # Runs statistical tests and EDA
-```
+This repository accompanies our research paper **"Mindful Interactions with GenAI: A ChatGPT Case Study"**, which explores mindfulness in human–AI communcation through the lens of morality, politeness, and conversational alignment. The paper is currently under review in the *International Journal of Human-Computer Studies*.
 
 ---
 
-## ⚙️ Installation
+## Goal
 
-Install all required Python libraries:
+This project investigates whether generative AI systems like ChatGPT can engage in mindful communication—being present, polite, morally aware, and responsive to users.
 
-```bash
-pip install pandas numpy torch transformers pyspark wordsegment matplotlib seaborn wordcloud nltk
-```
+We analyze 48,000 real Human–ChatGPT conversations across three core notions:
+ - Morality
+ - Politeness
+ - Conversational Alignment
+Our findings show that while ChatGPT consistently uses polite and moral language, it lacks adaptive flexibility—limiting its ability to respond to users with nuance. In contrast, human users show greater variation and emotional depth.
 
-Also download NLTK resources:
+We propose a layered framework for mindful AI communication, and offer tools and insights for designing AI systems that are socially intelligent, ethically grounded, and capable of building trust in human–AI interactions.
+Our aim is to offer a robust and reproducible pipeline for studying mindful and ethically grounded human–AI interactions.
 
-```python
-import nltk
-nltk.download("punkt")
-nltk.download("vader_lexicon")
-```
 
----
+## Data & Resources
 
-## 🚀 Usage
+- **Dataset**: [ShareGPT52K (Hugging Face)](https://huggingface.co/datasets/RyokoAI/ShareGPT52K)  
+  A large-scale collection of 90k real human–ChatGPT conversations.
 
-### Step 1: Moral Score Extraction
+- **Morality Modeling**: [Moral Axes (GitHub)](https://github.com/joshnguyen99/moral_axes)  
+  A framework for scoring moral language across five moral foundations using transformer models based on Moral Foundations Theory (MFT).
 
-```bash
-python scripts/moralformer_processor.py
-```
+- **Politeness Detection**: [`politeness` R package](https://cran.r-project.org/web/packages/politeness/vignettes/politeness.html)  
+  A linguistic tool for identifying politeness strategies in text based on prior sociolinguistic theory on Bown Theory.
 
-- Uses `microsoft/moralformer-base` transformer
-- Processes messages and outputs moral probabilities per message
+- **LIWC (Linguistic Inquiry and Word Count)**: [www.liwc.app](https://www.liwc.app)  
+  Used to compute linguistic style matching (LSM) for Conversational Accomodation Theory (CAT).  
+  *Note: LIWC requires a licensed dictionary.*
 
-### Step 2: Alignment Feature Computation
+## Methods
 
-```bash
-python scripts/alignment_processor.py
-```
+Our analysis pipeline combines computational content analysis, linguistic signal processing, and statistical testing to examine how mindful communication manifests in human–ChatGPT interactions.
 
-- Computes:
-  - **Lexical overlap** (token intersection)
-  - **Syntactic similarity** (cosine of vectorized messages)
-- Saves output with added alignment features
+1. **Preprocessing**
+   - Flattened the nested ShareGPT JSON into turn-level data
+   - Filtered for English-only conversations
+   - Cleaned and normalized text for consistent feature extraction
 
-### Step 3: Statistical Analysis and EDA
+2. **Feature Extraction**
+   - **Turn-level features**:
+     - **Moral foundation probabilities** using the transformer-based Mformer model
+     - **Politeness markers** based on Danescu et al.'s framework and the [`politeness`](https://cran.r-project.org/web/packages/politeness/vignettes/politeness.html) R package
+     - **Sentiment scores** using VADER
+     - **LIWC-style features** including pronouns, function words, and emotional tone
+     - **Alignment metrics** between adjacent turns:
+       - Lexical overlap  
+       - Linguistic Style Matching (LSM)  
+       - Politeness accommodation  
+       - Sentiment alignment  
 
-```bash
-python scripts/moral_stats_and_eda.py
-```
+   - **Conversation-level summary features**:
+     - Slopes of alignment metrics over the course of each conversation (to quantify adaptation)
+     - Number of messages per conversation
+     - Average message length
+     - Vocabulary richness (vocab ratio)
+     - Vocabulary ratio between GPT and human speakers
 
-- Performs:
-  - Descriptive stats
-  - Shapiro-Wilk, t-tests, Wilcoxon, Mann-Whitney U tests
-  - Sentiment scoring using VADER
-  - Word clouds and feature distributions
-  - Correlation heatmap across features
+3. **Statistical Analysis**
+   - **Normality testing** with Shapiro–Wilk
+   - **Between-group comparisons** using Mann–Whitney U tests
+   - **Within-group comparisons** using Wilcoxon signed-rank tests
+   - **Spearman's Correlation analysis** to explore interdependencies across features
+   - Comparative analysis between **human** and **GPT** speakers on all extracted metrics
 
----
+4. **Visualization**
+   - Word clouds to illustrate content patterns
+   - Distribution plots for each linguistic/moral dimension
+   - Slope and trend charts to visualize alignment behaviors over time
 
-## 📊 Output
+## 🗂 Repository Structure
 
-- `morality_scores.json`: Contains moral foundation probabilities per message
-- `alignment_features.json`: Adds lexical and syntactic alignment scores
-- Visuals (histograms, heatmaps, word clouds) are shown inline (or can be modified to save)
+### 📁 src/
+Python and R scripts used as a pipeline for processing, analyzing, and extracting features from the data.
 
----
+src/ 
+├── 01_cleaning.py # Flatten and clean raw ShareGPT JSONs 
+├── 02_preprocessing_politeness_extraction.R # Extract politeness markers using the politeness R package 
+├── 03_morality_extraction.py # Apply MFormer to extract moral foundation scores 
+├── 04_alignment_quantification.py # Compute alignment metrics (word overlap, LSM, sentiment, politeness) 
+├── 05_eda_stats.py # Run statistical tests and exploratory data analysis 
+└── ...
 
-## 🧠 Moral Foundations
+### 📁 notebooks/
+Working Jupyter notebooks containing full analysis logic, exploratory experimentation, and intermediate results.
 
-This project quantifies the presence of five moral dimensions in text using a transformer model:
+### 📁 results/
+Contains generated results from statistical and visual analysis.
 
-- **Care** vs **Harm**
-- **Fairness** vs **Cheating**
-- **Loyalty** vs **Betrayal**
-- **Authority** vs **Subversion**
-- **Sanctity** vs **Degradation**
+results/ 
+├── figures/ # Visualizations (e.g., distributions, trends, word clouds) 
+└── tests/ # Raw statistical test outputs (before z-scoring or Bonferroni correction)
 
-Scores range from 0 to 1 and are derived from Microsoft’s [`moralformer-base`](https://huggingface.co/microsoft/moralformer-base) model.
+### 📁 output/
+output/ 
+└── sample_metrics.csv # Cleaned text with extracted features for the first 100 rows (example output)
 
----
-
-## 🙌 Acknowledgments
-
-- [Moral Foundations Theory](https://moralfoundations.org/) — Graham et al.
-- [Microsoft Research](https://huggingface.co/microsoft/moralformer-base)
-- HuggingFace Transformers, NLTK, PySpark, Seaborn
-
----
-
-## 📬 Contact
-
-For questions, collaborations, or suggestions, please feel free to open an issue or get in touch via email.
+### 📄 requirements.txt
+Python package dependencies for reproducing the analysis pipeline.

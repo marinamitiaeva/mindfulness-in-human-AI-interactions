@@ -1,0 +1,58 @@
+{
+  "alignment": {
+    "human": {
+      "word_overlap_slope": {
+        "shapiro_p": 0.0,
+        "wilcoxon_stat": 157823992.0,
+        "wilcoxon_p": 0.0
+      },
+      "lsm_slope": {
+        "shapiro_p": 0.0,
+        "wilcoxon_stat": 264409614.0,
+        "wilcoxon_p": 0.007854141035474374
+      },
+      "politeness_slope": {
+        "shapiro_p": 0.0,
+        "wilcoxon_stat": 204242877.5,
+        "wilcoxon_p": 3.9091319460211915e-11
+      },
+      "sentiment_slope": {
+        "shapiro_p": 0.0,
+        "wilcoxon_stat": 223526814.5,
+        "wilcoxon_p": 2.0879412803258352e-190
+      },
+      "overall_accommodation_slope": {
+        "shapiro_p": 0.0,
+        "wilcoxon_stat": 226045003.0,
+        "wilcoxon_p": 7.876307468246161e-183
+      }
+    },
+    "gpt": {
+      "word_overlap_slope": {
+        "shapiro_p": 0.0,
+        "wilcoxon_stat": 38597965.0,
+        "wilcoxon_p": 0.0
+      },
+      "lsm_slope": {
+        "shapiro_p": 0.0,
+        "wilcoxon_stat": 0.0,
+        "wilcoxon_p": 0.0
+      },
+      "politeness_slope": {
+        "shapiro_p": 0.0,
+        "wilcoxon_stat": 84857308.0,
+        "wilcoxon_p": 0.0
+      },
+      "sentiment_slope": {
+        "shapiro_p": 0.0,
+        "wilcoxon_stat": 68187732.0,
+        "wilcoxon_p": 0.0
+      },
+      "overall_accommodation_slope": {
+        "shapiro_p": 0.0,
+        "wilcoxon_stat": 2840440.0,
+        "wilcoxon_p": 0.0
+      }
+    }
+  }
+}

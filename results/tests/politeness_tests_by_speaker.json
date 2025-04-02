@@ -1,0 +1,128 @@
+{
+  "norm_Hedges": {
+    "mean": {
+      "human": 0.0062,
+      "gpt": 0.0071
+    },
+    "shapiro": {
+      "human": {
+        "p_value": 0.0
+      },
+      "gpt": {
+        "p_value": 0.0
+      }
+    },
+    "mannwhitney": {
+      "statistic": 30572297431.0,
+      "p_value": 0.0
+    }
+  },
+  "norm_Swearing": {
+    "mean": {
+      "human": 0.0002,
+      "gpt": 0.0001
+    },
+    "shapiro": {
+      "human": {
+        "p_value": 0.0
+      },
+      "gpt": {
+        "p_value": 0.0
+      }
+    },
+    "mannwhitney": {
+      "statistic": 45399131697.0,
+      "p_value": 0.0005043687189412355
+    }
+  },
+  "norm_Reassurance": {
+    "mean": {
+      "human": 0.0,
+      "gpt": 0.0
+    },
+    "shapiro": {
+      "human": {
+        "p_value": 0.0
+      },
+      "gpt": {
+        "p_value": 0.0
+      }
+    },
+    "mannwhitney": {
+      "statistic": 45374272498.5,
+      "p_value": 2.593901967469753e-25
+    }
+  },
+  "norm_Please": {
+    "mean": {
+      "human": 0.007,
+      "gpt": 0.0012
+    },
+    "shapiro": {
+      "human": {
+        "p_value": 0.0
+      },
+      "gpt": {
+        "p_value": 0.0
+      }
+    },
+    "mannwhitney": {
+      "statistic": 46133823762.0,
+      "p_value": 1.9185663140284457e-108
+    }
+  },
+  "norm_Gratitude": {
+    "mean": {
+      "human": 0.002,
+      "gpt": 0.0005
+    },
+    "shapiro": {
+      "human": {
+        "p_value": 0.0
+      },
+      "gpt": {
+        "p_value": 0.0
+      }
+    },
+    "mannwhitney": {
+      "statistic": 44274151040.0,
+      "p_value": 0.0
+    }
+  },
+  "norm_Apology": {
+    "mean": {
+      "human": 0.0001,
+      "gpt": 0.0009
+    },
+    "shapiro": {
+      "human": {
+        "p_value": 0.0
+      },
+      "gpt": {
+        "p_value": 0.0
+      }
+    },
+    "mannwhitney": {
+      "statistic": 42762912168.0,
+      "p_value": 0.0
+    }
+  },
+  "norm_Affirmation": {
+    "mean": {
+      "human": 0.0025,
+      "gpt": 0.0011
+    },
+    "shapiro": {
+      "human": {
+        "p_value": 0.0
+      },
+      "gpt": {
+        "p_value": 0.0
+      }
+    },
+    "mannwhitney": {
+      "statistic": 43769946439.0,
+      "p_value": 0.0
+    }
+  }
+}

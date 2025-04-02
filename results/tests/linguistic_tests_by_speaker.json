@@ -1,0 +1,33 @@
+{
+  "vocab_ratio": {
+    "mean": {
+      "human": 0.11020126982454373,
+      "gpt": 0.06481533322747568
+    },
+    "shapiro": {
+      "human": {
+        "statistic": 0.9693136811256409,
+        "p_value": 0.0
+      },
+      "gpt": {
+        "statistic": 0.9380301833152771,
+        "p_value": 0.0
+      }
+    },
+    "mannwhitney": {
+      "statistic": 1915156372.0,
+      "p_value": 0.0
+    },
+    "gpt_human_ratio": {
+      "mean": 0.6293391025247175,
+      "shapiro": {
+        "statistic": 0.43185955286026,
+        "p_value": 0.0
+      },
+      "wilcoxon": {
+        "statistic": 68625678.5,
+        "p_value": 0.0
+      }
+    }
+  }
+}
