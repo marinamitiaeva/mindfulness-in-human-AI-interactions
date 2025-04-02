@@ -1,0 +1,30 @@
+morality-research/
+│
+├── README.md                      # Overview of the project
+├── LICENSE                        # License for sharing
+├── requirements.txt               # Python dependencies
+├── environment.yml                # Conda env (optional)
+├── .gitignore                     # To ignore unnecessary files
+│
+├── data/                          # (optionally .gitignore the raw files)
+│   ├── raw/
+│   ├── processed/
+│
+├── notebooks/
+│   ├── 01_data_cleaning_language_detection.ipynb
+│   ├── 02_politeness_preprocessing.R
+│   ├── 03_alignment_analysis.ipynb
+│   ├── 04_morality_extraction.ipynb
+│   └── 05_morality_politeness_correlation.ipynb
+│
+├── src/
+│   ├── utils.py                   # Python helpers
+│   ├── alignment.py               # Code for alignment metrics
+│   └── morality.py                # Moral foundation score extraction
+│
+├── results/
+│   ├── figures/
+│   └── stats/
+│
+└── output/
+    └── final_df_normalized_shrt.json

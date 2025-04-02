@@ -1,0 +1,14 @@
+pandas
+langdetect
+numpy
+torch
+transformers
+pyspark
+wordsegment
+spacy
+nltk
+tqdm
+scikit-learn
+matplotlib
+seaborn
+wordcloud
