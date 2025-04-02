@@ -1,6 +1,6 @@
 # Mindful Interactions with GenAI: A ChatGPT Case Study
 
-This repository accompanies our research paper **"Mindful Interactions with GenAI: A ChatGPT Case Study"**, which explores mindfulness in human–AI communcation through the lens of morality, politeness, and conversational alignment. The paper is currently under review in the *International Journal of Human-Computer Studies*.
+This repository accompanies our research paper, which explores mindfulness in human–AI communcation through the lens of morality, politeness, and conversational alignment. The paper is currently under review in the *International Journal of Human-Computer Studies*.
 
 ---
 
