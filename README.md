@@ -20,17 +20,17 @@ Our aim is to offer a robust and reproducible pipeline for studying mindful and 
 
 ## Data & Resources
 
-- **Dataset**: [ShareGPT52K (Hugging Face)](https://huggingface.co/datasets/RyokoAI/ShareGPT52K)  
-  A large-scale collection of 90k real human–ChatGPT conversations.
+- **Dataset: [ShareGPT52K (Hugging Face)](https://huggingface.co/datasets/RyokoAI/ShareGPT52K)**  
+  A large-scale collection of over 90,000 real human–ChatGPT conversations, used as the foundation for all turn-level and conversational analyses.
 
-- **Morality Modeling**: [Moral Axes (GitHub)](https://github.com/joshnguyen99/moral_axes)  
-  A framework for scoring moral language across five moral foundations using transformer models based on Moral Foundations Theory (MFT).
+- **Morality Modeling: [Mformer (GitHub)](https://github.com/joshnguyen99/moral_axes)**  
+  A transformer-based framework for scoring moral language across the five moral foundations defined by Moral Foundations Theory (MFT).
 
-- **Politeness Detection**: [`politeness` R package](https://cran.r-project.org/web/packages/politeness/vignettes/politeness.html)  
-  A linguistic tool for identifying politeness strategies in text based on prior sociolinguistic theory on Bown Theory.
+- **Politeness Detection: [`politeness` R package](https://cran.r-project.org/web/packages/politeness/vignettes/politeness.html)**  
+  A linguistic tool for identifying politeness strategies in text, based on sociolinguistic theory and Brown & Levinson's Politeness Theory.
 
-- **LIWC (Linguistic Inquiry and Word Count)**: [www.liwc.app](https://www.liwc.app)  
-  Used to compute linguistic style matching (LSM) for Conversational Accomodation Theory (CAT).  
+- **LIWC (Linguistic Inquiry and Word Count): [www.liwc.app](https://www.liwc.app)**  
+  Used to compute Linguistic Style Matching (LSM) as part of Conversational Accommodation Theory (CAT).  
   *Note: LIWC requires a licensed dictionary.*
 
 ## Methods
