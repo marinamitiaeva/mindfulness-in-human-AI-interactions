@@ -12,6 +12,7 @@ We analyze 48,000 real Human–ChatGPT conversations across three core notions:
  - Morality
  - Politeness
  - Conversational Alignment
+   
 Our findings show that while ChatGPT consistently uses polite and moral language, it lacks adaptive flexibility—limiting its ability to respond to users with nuance. In contrast, human users show greater variation and emotional depth.
 
 We propose a layered framework for mindful AI communication, and offer tools and insights for designing AI systems that are socially intelligent, ethically grounded, and capable of building trust in human–AI interactions.
